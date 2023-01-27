@@ -1,0 +1,16 @@
+rule_name(object1, object2, ...) :- fact/rule(object1,
+ object2, ...)
+Suppose a clause is like :
+P :- Q;R.
+This can also be written as
+P :- Q.
+P :- R.
+
+If one clause is like :
+P :- Q,R;S,T,U.
+
+Is understood as
+P :- (Q,R);(S,T,U).
+Or can also be written as:
+P :- Q,R.
+P :- S,T,U.
