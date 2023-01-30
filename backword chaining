@@ -1,0 +1,16 @@
+?- suspended(mrx).
+true.
+?- suspended(mrxa).
+false.
+?- trace.
+true.
+[trace]  ?- suspended(mrx).
+Call: (7) suspended(mrx) ? creep
+Call: (8) securityPerson(mrx) ? creep
+Exit: (8) securityPerson(mrx) ? creep
+Call: (8) outsider(_G1937) ? creep
+Exit: (8) outsider(_G1937) ? creep
+Call: (8) securityAllows(mrx, _G1938) ? creep
+Exit: (8) securityAllows(mrx, _G1938) ? creep
+Exit: (7) suspended(mrx) ? creep
+true.
