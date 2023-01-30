@@ -1,0 +1,16 @@
+?- p(x,y).
+true.        % a p relationship exists (fact, but could also be rule)
+
+?- p(x,A).
+A = y.       % the thing related to x via p is y
+
+?- p(A,y). 
+A = x.       % the thing related to x via p is y
+
+?- p(A,B).
+A = x,       % things related via p are x and y
+B = y.
+
+?- p(c,d).   
+false.       % not REALLY "false" but "as far as I can tell, there
+             % is no relationship p between c and d"
